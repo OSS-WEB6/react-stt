@@ -83,11 +83,13 @@ const useSpeech = (options?: UseSpeechToTextOptions): SpeechToTextResult => {
           }
         }
 
+        // isFinal == true -> transcript에 누적
         if (final) {
-          setTranscript((prev) => prev + final + ' ');
-          setCurrentInterimTranscript('');
+          setTranscript((prev) => prev + final + ' '); // 공백 추가하여 단어 구분
+          setCurrentInterimTranscript(''); // 최종 결과로 확정 -> 임시 스크립트 초기화
         }
 
+        // 중간 결과가 있고, interimResults 옵션이 true일 경우에만 업데이트
         if (interim && interimResults) {
           setCurrentInterimTranscript(interim);
         }
