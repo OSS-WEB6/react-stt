@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { useSpeech } from '../hooks/useSpeech';
 
 const Speech: React.FC = () => {
@@ -13,6 +14,15 @@ const Speech: React.FC = () => {
 
   return (
     <div>
+      <nav>
+        <h3>
+          <Link to='/page1'>Theme1</Link>
+        </h3>
+
+        <h3>
+          <Link to='/page2'>Theme2</Link>
+        </h3>
+      </nav>
       <h1>Speech to Text</h1>
 
       {!browserSupport.isSupported && <p style={{ color: 'red' }}>{browserSupport.errorMessage}</p>}

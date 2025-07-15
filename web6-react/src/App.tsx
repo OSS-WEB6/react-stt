@@ -1,10 +1,10 @@
 import './App.css';
-import Speech from './components/Speech';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div>
-      <Speech />
+      <Home />
     </div>
   );
 }
