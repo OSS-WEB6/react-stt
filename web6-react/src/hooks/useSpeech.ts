@@ -3,7 +3,7 @@ STT(Speech To Text)
 Web Speech API
  */
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 /* @types */
 interface UseSpeechToTextOptions {
